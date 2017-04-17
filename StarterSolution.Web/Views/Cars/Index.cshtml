@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CarViewModel>
+@{
+    ViewData["Title"] = "View Cars";
+}
+
+<h2>@ViewData["Title"].</h2>
+<p class="text-success">@ViewData["StatusMessage"]</p>
+
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+
+    <dl class="dl-horizontal">
+        @foreach (var car in @Model)
+        {
+            <dt>@Html.DisplayFor(c => car.Model)</dt>
+            <dt>@Html.DisplayFor(c => car.Make)</dt>
+            <dt>@Html.DisplayFor(c => car.Year)</dt>
+        }
+    </dl>
+</div>
